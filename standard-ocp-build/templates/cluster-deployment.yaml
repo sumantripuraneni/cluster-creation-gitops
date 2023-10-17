@@ -19,15 +19,15 @@ spec:
     azure:
       baseDomainResourceGroupName: {{ .Values.resourcegroup }}
       credentialsSecretRef:
-        name: {{ .Values.clusterName }}-azure-creds
+        name: {{ .Values.common.azureCredentials }}
       region: {{ .Values.region }}
       cloudName: AzurePublicCloud
   provisioning:
     installConfigSecretRef:
       name: {{ .Values.clusterName }}-install-config
     sshPrivateKeySecretRef:
-      name: {{ .Values.clusterName }}-ssh-private-key
+      name: {{ .Values.common.sshPrivateKey }}
     imageSetRef:
       name: img{{ .Values.ocpVersion }}-multi-appsub
   pullSecretRef:
-    name: {{ .Values.clusterName }}-pull-secret
+    name: {{ .Values.common.ocpPullSecretName }}
