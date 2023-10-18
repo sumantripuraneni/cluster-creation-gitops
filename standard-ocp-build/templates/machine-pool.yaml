@@ -1,0 +1,19 @@
+apiVersion: hive.openshift.io/v1
+kind: MachinePool
+metadata:
+  name: {{ .Values.clusterName }}-worker
+  namespace: {{ .Values.clusterName }}
+spec:
+  clusterDeploymentRef:
+    name: {{ .Values.clusterName }}
+  name: worker
+  platform:
+    azure:
+      osDisk:
+        diskSizeGB: 128
+      type: Standard_D2s_v3
+      zones:
+      - "1"
+      - "2"
+      - "3"
+  replicas: {{ .Values.computeReplicas }}

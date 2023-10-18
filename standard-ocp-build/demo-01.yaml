@@ -1,0 +1,8 @@
+clusterName: demo-01
+baseDomain: 9rpv6.azure.redhatworkshops.io
+controlplaneReplicas: 3
+computeReplicas: 3
+region: eastus
+resourcegroup: openenv-9rpv6
+sshPubkey: sh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8fT4auAz2P+K9JtxALZAJRwCuK9Z1JHBvaXHEYw6Fw0rJ711YbaJvgYHGxjPo+sl37YMeT2v63QUH/Rvj9VlNKeruMzBuGJEHzawTfblY0qF62GiLnFLFgqkhAuZ6PQmX9/vD4jRpO2/FYxop7+w9qvBAszf/QIcWJxY2loemPo8Y3gWkP0qPmZenx/my/PKcdJuXAh6k2aP44/1hAoUCGuNzqoAXNhy8/hLwtwOTIJW001zh5mXoqpUlHgaOXsffinndgTtSBKuPDukEsYflpEDLAeQVMwI1HcpzvEcXY7zLSqc6SLpWdzT0oGbvPQiW9gMxsXazejJOGcs11tF1
+ocpVersion: 4.12.37

@@ -17,17 +17,17 @@ spec:
   installed: false
   platform:
     azure:
-      baseDomainResourceGroupName: {{ .Values.provider.resourceGroup }}
+      baseDomainResourceGroupName: {{ .Values.resourcegroup }}
       credentialsSecretRef:
-        name: {{ .Values.common.azureCredentials }}
-      region: {{ .Values.provider.region }}
+        name: {{ .Values.clusterName }}-azure-creds
+      region: {{ .Values.region }}
       cloudName: AzurePublicCloud
   provisioning:
     installConfigSecretRef:
       name: {{ .Values.clusterName }}-install-config
     sshPrivateKeySecretRef:
-      name: {{ .Values.common.sshPrivateKey }}
+      name: {{ .Values.clusterName }}-ssh-private-key
     imageSetRef:
       name: img{{ .Values.ocpVersion }}-multi-appsub
   pullSecretRef:
-    name: {{ .Values.common.ocpPullSecretName }}
+    name: {{ .Values.clusterName }}-pull-secret
