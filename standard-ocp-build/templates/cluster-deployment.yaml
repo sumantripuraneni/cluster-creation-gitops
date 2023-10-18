@@ -17,10 +17,10 @@ spec:
   installed: false
   platform:
     azure:
-      baseDomainResourceGroupName: {{ .Values.resourcegroup }}
+      baseDomainResourceGroupName: {{ .Values.provider.resourceGroup }}
       credentialsSecretRef:
         name: {{ .Values.common.azureCredentials }}
-      region: {{ .Values.region }}
+      region: {{ .Values.provider.region }}
       cloudName: AzurePublicCloud
   provisioning:
     installConfigSecretRef:
